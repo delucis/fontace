@@ -26,7 +26,7 @@ import { fontace } from 'fontace';
 - `family`: The font family name as stored in the font file, e.g. `"Inter"`.
 - `style`: The style of this font file, e.g. `"normal"` or `"italic"`.
 - `unicodeRange`: The range of Unicode code points this font file contains, e.g. `"U+0-10FFFF"`.
-- `weight`: The weight this file supports, which can be a range for variable fonts, e.g. `"400"` or `"100 900"`.
+- `weight`: The font weight(s) this file supports, which can be a range for variable fonts, e.g. `"400"` or `"100 900"`.
 
 In addition it returns:
 
