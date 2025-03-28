@@ -17,14 +17,17 @@ import { fontace } from 'fontace';
 
 `fontace` is a small library, which intends to extract data specifically to help generate CSS `@font-face` declarations based on font files.
 
-`fontace` returns CSS-compatible values for:
+`fontace` returns the following CSS-compatible values intended for use with `font-family`, `font-style`, `unicode-range`, and `font-weight`:
 
 - `family`: The font family name as stored in the font file, e.g. `"Inter"`.
-- `format`: The font file format for use in [`format()`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#format), e.g.`"woff2"` or `"truetype"`.
-- `isVariable`: `true` if the font file contains variable axes of some kind.
 - `style`: The style of this font file, e.g. `"normal"` or `"italic"`.
 - `unicodeRange`: The range of Unicode code points this font file contains, e.g. `"U+0-10FFFF"`.
 - `weight`: The weight this file supports, which can be a range for variable fonts, e.g. `"400"` or `"100 900"`.
+
+In addition it returns:
+
+- `format`: The font file format for use in [`format()`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#format), e.g.`"woff2"` or `"truetype"`.
+- `isVariable`: `true` if the font file contains variable axes of some kind.
 
 ## Usage
 
