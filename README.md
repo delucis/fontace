@@ -1,5 +1,9 @@
 <h1 align="center">fontace</h1>
 <p align="center">Extract useful information from font files</p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/fontace"><img alt="fontace on NPM" src="https://img.shields.io/npm/v/fontace"></a>
+  <a href="https://github.com/delucis/fontace/actions/workflows/ci.yml"><img src="https://github.com/delucis/fontace/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
+</p>
 
 ## Installation
 
