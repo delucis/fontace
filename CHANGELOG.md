@@ -1,5 +1,11 @@
 # fontace
 
+## 0.2.1
+
+### Patch Changes
+
+- [`18c433e`](https://github.com/delucis/fontace/commit/18c433e6aa1283e5dad9c1cafb6975ffb7689dbc) Thanks [@delucis](https://github.com/delucis)! - Improves JSDoc comments on the metadata returned by `fontace`
+
 ## 0.2.0
 
 ### Minor Changes
