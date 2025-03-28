@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { fontdig } from '../src';
+import { fontace } from '../src';
 
 import interVariableWoff2String from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url&inline';
 import roboto400ItalicWoff2String from '@fontsource/roboto/files/roboto-latin-400-italic.woff2?url&inline';
@@ -26,10 +26,10 @@ const roboto900Woff = dataUrlToBuffer(roboto900WoffString);
 const openSans400TTF = dataUrlToBuffer(openSans400TTFString);
 const openSans300ItalicTTF = dataUrlToBuffer(openSans300ItalicTTFString);
 
-describe('fontdig', () => {
+describe('fontace', () => {
 	describe('TTF', () => {
 		test('should infer properties for a regular font', () => {
-			expect(fontdig(openSans400TTF)).toMatchInlineSnapshot(`
+			expect(fontace(openSans400TTF)).toMatchInlineSnapshot(`
 				{
 				  "family": "Open Sans",
 				  "style": "normal",
@@ -40,7 +40,7 @@ describe('fontdig', () => {
 		});
 
 		test('should infer properties for a light italic font', () => {
-			expect(fontdig(openSans300ItalicTTF)).toMatchInlineSnapshot(`
+			expect(fontace(openSans300ItalicTTF)).toMatchInlineSnapshot(`
 				{
 				  "family": "Open Sans Light",
 				  "style": "italic",
@@ -53,7 +53,7 @@ describe('fontdig', () => {
 
 	describe('WOFF', () => {
 		test('should infer properties for a regular font', () => {
-			expect(fontdig(roboto400Woff)).toMatchInlineSnapshot(`
+			expect(fontace(roboto400Woff)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
 				  "style": "normal",
@@ -64,7 +64,7 @@ describe('fontdig', () => {
 		});
 
 		test('should infer properties for a super bold font', () => {
-			expect(fontdig(roboto900Woff)).toMatchInlineSnapshot(`
+			expect(fontace(roboto900Woff)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto Black",
 				  "style": "normal",
@@ -75,7 +75,7 @@ describe('fontdig', () => {
 		});
 
 		test('should infer properties for an italic font', () => {
-			expect(fontdig(roboto400ItalicWoff)).toMatchInlineSnapshot(`
+			expect(fontace(roboto400ItalicWoff)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
 				  "style": "italic",
@@ -88,7 +88,7 @@ describe('fontdig', () => {
 
 	describe('WOFF2', () => {
 		test('should infer properties for a variable font', () => {
-			expect(fontdig(interVariableWoff2)).toMatchInlineSnapshot(`
+			expect(fontace(interVariableWoff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Inter",
 				  "style": "normal",
@@ -99,7 +99,7 @@ describe('fontdig', () => {
 		});
 
 		test('should infer properties for a regular font', () => {
-			expect(fontdig(roboto400Woff2)).toMatchInlineSnapshot(`
+			expect(fontace(roboto400Woff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
 				  "style": "normal",
@@ -110,7 +110,7 @@ describe('fontdig', () => {
 		});
 
 		test('should infer properties for a super bold font', () => {
-			expect(fontdig(roboto900Woff2)).toMatchInlineSnapshot(`
+			expect(fontace(roboto900Woff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto Black",
 				  "style": "normal",
@@ -121,7 +121,7 @@ describe('fontdig', () => {
 		});
 
 		test('should infer properties for an italic font', () => {
-			expect(fontdig(roboto400ItalicWoff2)).toMatchInlineSnapshot(`
+			expect(fontace(roboto400ItalicWoff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
 				  "style": "italic",
@@ -135,12 +135,12 @@ describe('fontdig', () => {
 	describe('errors', () => {
 		test('should throw an error for an invalid ArrayBuffer', () => {
 			const invalidBuffer = new Buffer(new ArrayBuffer(8));
-			expect(() => fontdig(invalidBuffer)).toThrow('Unknown font format');
+			expect(() => fontace(invalidBuffer)).toThrow('Unknown font format');
 		});
 
 		test('should throw an error for an empty ArrayBuffer', () => {
 			const emptyBuffer = new Buffer(new ArrayBuffer(0));
-			expect(() => fontdig(emptyBuffer)).toThrow('Unknown font format');
+			expect(() => fontace(emptyBuffer)).toThrow('Unknown font format');
 		});
 	});
 });

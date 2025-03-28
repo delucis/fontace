@@ -19,14 +19,14 @@ function getStyle(font: Font): FontStyle {
  * Infer font-face properties from a buffer containing font file data.
  * @param fontBuffer Buffer containing font file data.
  * @example
- * import { fontdig } from 'fontdig';
+ * import { fontace } from 'fontace';
  * import fs from 'node:fs';
  *
  * const fontBuffer = fs.readFileSync('./Inter.ttf');
- * const fontMetaData = fontdig(fontBuffer);
+ * const fontMetaData = fontace(fontBuffer);
  * // { family: "Inter", style: "normal", weight: "400", unicodeRange: "U+0, U+20-7E...
  */
-export function fontdig(fontBuffer: Buffer): FontMetadata {
+export function fontace(fontBuffer: Buffer): FontMetadata {
 	const font = create(fontBuffer) as Font | FontCollection;
 	if (font.type === 'TTC') {
 		throw new Error('TrueType Collection (TTC) files are not supported.');
