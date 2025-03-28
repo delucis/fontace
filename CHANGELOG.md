@@ -1,5 +1,17 @@
 # fontace
 
+## 0.2.0
+
+### Minor Changes
+
+- [`b7f05e8`](https://github.com/delucis/fontace/commit/b7f05e807652c8881278d5f81f74d9cce21a3f55) Thanks [@delucis](https://github.com/delucis)! - Adds an `isVariable` property to the metadata returned by `fontace`, which can be used to decide whether to include `tech(variations)` in `@font-face`.
+
+- [`36bdc86`](https://github.com/delucis/fontace/commit/36bdc863edab27baf350c1aaca2cf835134de6a2) Thanks [@delucis](https://github.com/delucis)! - Adds a `format` property to the metadata returned by `fontace`, which can be used when creating `format()` values for `@font-face`.
+
+### Patch Changes
+
+- [`fa46176`](https://github.com/delucis/fontace/commit/fa461763c9285d57feed1baccdd514205673b335) Thanks [@delucis](https://github.com/delucis)! - Fixes the return type of `fontace()`
+
 ## 0.1.0
 
 ### Minor Changes
