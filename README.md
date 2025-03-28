@@ -21,6 +21,7 @@ import { fontace } from 'fontace';
 
 - `family`: The font family name as stored in the font file, e.g. `"Inter"`.
 - `format`: The font file format for use in [`format()`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#format), e.g.`"woff2"` or `"truetype"`.
+- `isVariable`: `true` if the font file contains variable axes of some kind.
 - `style`: The style of this font file, e.g. `"normal"` or `"italic"`.
 - `unicodeRange`: The range of Unicode code points this font file contains, e.g. `"U+0-10FFFF"`.
 - `weight`: The weight this file supports, which can be a range for variable fonts, e.g. `"400"` or `"100 900"`.
@@ -39,7 +40,7 @@ import fs from 'node:fs';
 
 const fontBuffer = fs.readFileSync('./Inter.woff2');
 const metadata = fontace(fontBuffer);
-// { family: "Inter", format: 'woff2', style: "normal", weight: "400", unicodeRange: "U+0, U+20-7E..." }
+// { family: "Inter", format: 'woff2', style: "normal", weight: "400", isVariable: false, unicodeRange: "U+0, U+20-7E..." }
 ```
 
 ### Example: remote font file
@@ -53,13 +54,16 @@ import fs from 'node:fs';
 const response = await fetch('https://example.com/Inter-Variable.woff2');
 const fontBuffer = new Buffer(await response.arrayBuffer());
 const metadata = fontace(fontBuffer);
-// { family: "Inter", format: 'woff2', style: "normal", weight: "100 900", unicodeRange: "U+0, U+20-7E..." }
+// { family: "Inter", format: 'woff2', style: "normal", weight: "100 900", isVariable: true, unicodeRange: "U+0, U+20-7E..." }
 ```
 
 ### Example: using `fontace` data to create CSS
 
 ```js
-const { family, format, style, unicodeRange, weight } = fontace(fontBuffer);
+const { family, format, isVariable, style, unicodeRange, weight } = fontace(fontBuffer);
+
+let src = `url(/MyFont.woff2) format('${format}')`;
+if (isVariable) src += ' tech(variations)';
 
 const fontFaceDeclaration = `@font-face {
   font-family: ${family};
@@ -67,7 +71,7 @@ const fontFaceDeclaration = `@font-face {
   font-weight: ${weight};
   font-display: swap;
   unicode-range: ${unicodeRange};
-  src: url(/MyFont.woff2) format('${format}');
+  src: ${src};
 }`;
 ```
 

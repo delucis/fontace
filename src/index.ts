@@ -42,6 +42,7 @@ export function fontace(fontBuffer: Buffer): FontMetadata {
 		unicodeRange: getUnicodeRange(font),
 		weight: getWeight(font),
 		format: ({ TTF: 'truetype', WOFF: 'woff', WOFF2: 'woff2' } as const)[font.type],
+		isVariable: Object.keys(font.variationAxes).length > 0,
 	};
 }
 

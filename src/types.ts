@@ -37,4 +37,6 @@ export interface FontMetadata {
 	weight: FontWeight;
 	/** Font format compatible with `format()` values in `@font-face` `src` properties. */
 	format: 'truetype' | 'woff' | 'woff2';
+	/** Whether or not this font is variable. */
+	isVariable: boolean;
 }
