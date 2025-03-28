@@ -55,7 +55,7 @@ import { fontace } from 'fontace';
 import fs from 'node:fs';
 
 const response = await fetch('https://example.com/Inter-Variable.woff2');
-const fontBuffer = new Buffer(await response.arrayBuffer());
+const fontBuffer = Buffer.from(await response.arrayBuffer());
 const metadata = fontace(fontBuffer);
 // { family: "Inter", format: 'woff2', style: "normal", weight: "100 900", isVariable: true, unicodeRange: "U+0, U+20-7E..." }
 ```

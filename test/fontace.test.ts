@@ -152,12 +152,12 @@ describe('fontace', () => {
 
 	describe('errors', () => {
 		test('should throw an error for an invalid ArrayBuffer', () => {
-			const invalidBuffer = new Buffer(new ArrayBuffer(8));
+			const invalidBuffer = Buffer.from(new ArrayBuffer(8));
 			expect(() => fontace(invalidBuffer)).toThrow('Unknown font format');
 		});
 
 		test('should throw an error for an empty ArrayBuffer', () => {
-			const emptyBuffer = new Buffer(new ArrayBuffer(0));
+			const emptyBuffer = Buffer.from(new ArrayBuffer(0));
 			expect(() => fontace(emptyBuffer)).toThrow('Unknown font format');
 		});
 	});
@@ -177,10 +177,10 @@ function dataUrlToBuffer(dataUrl: string) {
 		for (var i = 0; i < binaryString.length; i++) {
 			bytes[i] = binaryString.charCodeAt(i);
 		}
-		return new Buffer(bytes.buffer);
+		return Buffer.from(bytes.buffer);
 	}
 	const str = decodeURIComponent(dataUrl.slice(dataUrl.indexOf(',') + 1));
 	const enc = new TextEncoder();
 	const bytes = enc.encode(str);
-	return new Buffer(bytes.buffer);
+	return Buffer.from(bytes.buffer);
 }
