@@ -32,6 +32,7 @@ describe('fontace', () => {
 			expect(fontace(openSans400TTF)).toMatchInlineSnapshot(`
 				{
 				  "family": "Open Sans",
+				  "format": "truetype",
 				  "style": "normal",
 				  "unicodeRange": "U+0, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303-304, U+308-309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+2074, U+20AC, U+2122, U+2212, U+2215, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "400",
@@ -43,6 +44,7 @@ describe('fontace', () => {
 			expect(fontace(openSans300ItalicTTF)).toMatchInlineSnapshot(`
 				{
 				  "family": "Open Sans Light",
+				  "format": "truetype",
 				  "style": "italic",
 				  "unicodeRange": "U+0, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303-304, U+308-309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+2074, U+20AC, U+2122, U+2212, U+2215, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "300",
@@ -56,6 +58,7 @@ describe('fontace', () => {
 			expect(fontace(roboto400Woff)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
+				  "format": "woff",
 				  "style": "normal",
 				  "unicodeRange": "U+0, U+2, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303, U+309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "400",
@@ -67,6 +70,7 @@ describe('fontace', () => {
 			expect(fontace(roboto900Woff)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto Black",
+				  "format": "woff",
 				  "style": "normal",
 				  "unicodeRange": "U+0, U+2, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303, U+309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "900",
@@ -78,6 +82,7 @@ describe('fontace', () => {
 			expect(fontace(roboto400ItalicWoff)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
+				  "format": "woff",
 				  "style": "italic",
 				  "unicodeRange": "U+0, U+2, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303, U+309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "400",
@@ -91,6 +96,7 @@ describe('fontace', () => {
 			expect(fontace(interVariableWoff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Inter",
+				  "format": "woff2",
 				  "style": "normal",
 				  "unicodeRange": "U+0, U+20-7E, U+A0-AC, U+AE-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303-304, U+308-309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+FEFF, U+FFFF",
 				  "weight": "100 900",
@@ -102,6 +108,7 @@ describe('fontace', () => {
 			expect(fontace(roboto400Woff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
+				  "format": "woff2",
 				  "style": "normal",
 				  "unicodeRange": "U+0, U+2, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303, U+309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "400",
@@ -113,6 +120,7 @@ describe('fontace', () => {
 			expect(fontace(roboto900Woff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto Black",
+				  "format": "woff2",
 				  "style": "normal",
 				  "unicodeRange": "U+0, U+2, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303, U+309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "900",
@@ -124,6 +132,7 @@ describe('fontace', () => {
 			expect(fontace(roboto400ItalicWoff2)).toMatchInlineSnapshot(`
 				{
 				  "family": "Roboto",
+				  "format": "woff2",
 				  "style": "italic",
 				  "unicodeRange": "U+0, U+2, U+D, U+20-7E, U+A0-FF, U+131, U+152-153, U+2BC, U+2C6, U+2DA, U+2DC, U+300-301, U+303, U+309, U+323, U+2002, U+2009, U+200B, U+2013-2014, U+2018-201A, U+201C-201E, U+2022, U+2026, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD, U+FFFF",
 				  "weight": "400",

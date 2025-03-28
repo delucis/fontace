@@ -35,4 +35,6 @@ export interface FontMetadata {
 	unicodeRange: string;
 	style: FontStyle;
 	weight: FontWeight;
+	/** Font format compatible with `format()` values in `@font-face` `src` properties. */
+	format: 'truetype' | 'woff' | 'woff2';
 }

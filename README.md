@@ -20,6 +20,7 @@ import { fontace } from 'fontace';
 `fontace` returns CSS-compatible values for:
 
 - `family`: The font family name as stored in the font file, e.g. `"Inter"`.
+- `format`: The font file format for use in [`format()`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#format), e.g.`"woff2"` or `"truetype"`.
 - `style`: The style of this font file, e.g. `"normal"` or `"italic"`.
 - `unicodeRange`: The range of Unicode code points this font file contains, e.g. `"U+0-10FFFF"`.
 - `weight`: The weight this file supports, which can be a range for variable fonts, e.g. `"400"` or `"100 900"`.
@@ -38,7 +39,7 @@ import fs from 'node:fs';
 
 const fontBuffer = fs.readFileSync('./Inter.woff2');
 const metadata = fontace(fontBuffer);
-// { family: "Inter", style: "normal", weight: "400", unicodeRange: "U+0, U+20-7E..." }
+// { family: "Inter", format: 'woff2', style: "normal", weight: "400", unicodeRange: "U+0, U+20-7E..." }
 ```
 
 ### Example: remote font file
@@ -52,13 +53,13 @@ import fs from 'node:fs';
 const response = await fetch('https://example.com/Inter-Variable.woff2');
 const fontBuffer = new Buffer(await response.arrayBuffer());
 const metadata = fontace(fontBuffer);
-// { family: "Inter", style: "normal", weight: "100 900", unicodeRange: "U+0, U+20-7E..." }
+// { family: "Inter", format: 'woff2', style: "normal", weight: "100 900", unicodeRange: "U+0, U+20-7E..." }
 ```
 
 ### Example: using `fontace` data to create CSS
 
 ```js
-const { family, style, unicodeRange, weight } = fontace(fontBuffer);
+const { family, format, style, unicodeRange, weight } = fontace(fontBuffer);
 
 const fontFaceDeclaration = `@font-face {
   font-family: ${family};
@@ -66,7 +67,7 @@ const fontFaceDeclaration = `@font-face {
   font-weight: ${weight};
   font-display: swap;
   unicode-range: ${unicodeRange};
-  src: url(/MyFont.woff2) format('woff2');
+  src: url(/MyFont.woff2) format('${format}');
 }`;
 ```
 
