@@ -28,6 +28,12 @@
 		"font-face"
 	],
 	"author": "delucis",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/delucis/fontace.git"
+	},
+	"bugs": "https://github.com/delucis/fontace/issues",
+	"homepage": "https://github.com/delucis/fontace#readme",
 	"license": "MIT",
 	"dependencies": {
 		"@types/fontkit": "^2.0.7",
