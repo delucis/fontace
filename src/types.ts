@@ -32,7 +32,7 @@ export type FontWeight =
 
 export interface FontMetadata {
 	family: string;
-	unicodeRange?: string;
-	style?: FontStyle;
-	weight?: FontWeight;
+	unicodeRange: string;
+	style: FontStyle;
+	weight: FontWeight;
 }
