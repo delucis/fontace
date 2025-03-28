@@ -1,0 +1,41 @@
+{
+	"name": "fontdig",
+	"version": "1.0.0",
+	"description": "Extract useful information from font files",
+	"type": "module",
+	"sideEffects": false,
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup src/index.ts --format esm --dts --clean",
+		"prepublishOnly": "pnpm build",
+		"test": "vitest"
+	},
+	"keywords": [
+		"font",
+		"fontkit",
+		"opentype",
+		"truetype",
+		"woff",
+		"woff2",
+		"css",
+		"font-face"
+	],
+	"author": "delucis",
+	"license": "MIT",
+	"dependencies": {
+		"@types/fontkit": "^2.0.7",
+		"fontkit": "^2.0.4"
+	},
+	"devDependencies": {
+		"@fontsource-variable/inter": "^5.2.5",
+		"@fontsource/roboto": "^5.2.5",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.2",
+		"vite": "^6.2.3",
+		"vitest": "^3.0.9"
+	},
+	"packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+}
