@@ -1,6 +1,6 @@
 {
 	"name": "fontace",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Extract useful information from font files",
 	"type": "module",
 	"sideEffects": false,

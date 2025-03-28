@@ -1,5 +1,0 @@
----
-"fontace": minor
----
-
-Initial release
