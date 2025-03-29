@@ -1,5 +1,5 @@
-import { create, type FontCollection } from 'fontkit';
-import { Font, FontStyle, FontWeight, FontMetadata } from './types';
+import { create, type FontCollection, type Font } from 'fontkit';
+import type { FontStyle, FontWeight, FontMetadata } from './types';
 
 /** Get CSS weight for a font. */
 function getWeight(font: Font): FontWeight {
