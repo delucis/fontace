@@ -1,5 +1,11 @@
 # fontace
 
+## 0.2.2
+
+### Patch Changes
+
+- [`86f07fe`](https://github.com/delucis/fontace/commit/86f07fe4ee9adbf56ab3af69dd1d45ac89d4a040) Thanks [@delucis](https://github.com/delucis)! - Updates `@types/fontkit` internal dependency
+
 ## 0.2.1
 
 ### Patch Changes
