@@ -32,7 +32,7 @@ In addition it returns:
 
 - `format`: The font file format for use in [`format()`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#format), e.g.`"woff2"` or `"truetype"`.
 - `isVariable`: `true` if the font file contains variable axes of some kind.
-- `unicodeRangeArray`: An array of the Unicode code point ranges this font file contains, e.g. `["U+0-10FFFF"]`, equivalent to `unicodeRange.split(', ')`. Useful if you need to iterate through the available ranges instead of inlining directly them in CSS.
+- `unicodeRangeArray`: An array of the Unicode code point ranges this font file contains, e.g. `["U+0-10FFFF"]`, equivalent to `unicodeRange.split(', ')`. Useful if you need to iterate through the available ranges instead of inlining them directly in CSS.
 
 ## Usage
 
