@@ -37,9 +37,9 @@ export function fontace(fontBuffer: Buffer): FontMetadata {
 	}
 
 	return {
+		...getUnicodeRange(font),
 		family: font.familyName,
 		style: getStyle(font),
-		unicodeRange: getUnicodeRange(font),
 		weight: getWeight(font),
 		format: ({ TTF: 'truetype', WOFF: 'woff', WOFF2: 'woff2' } as const)[font.type],
 		isVariable: Object.keys(font.variationAxes).length > 0,
@@ -51,10 +51,14 @@ export function fontace(fontBuffer: Buffer): FontMetadata {
  * @param font A fontkit font object.
  * @returns A CSS unicode-range string, e.g. `"U+20-22, U+4E-50"`.
  */
-function getUnicodeRange({ characterSet }: Font): string {
+function getUnicodeRange({ characterSet }: Font): {
+	unicodeRange: string;
+	unicodeRangeArray: string[];
+} {
 	if (!characterSet || characterSet.length === 0) {
-		// The default value of `unicodeRange` is U+0-10FFFF, which represents all Unicode characters.
-		return 'U+0-10FFFF';
+		/** The default value of `unicodeRange` is U+0-10FFFF, which represents all Unicode characters. */
+		const defaultRange = 'U+0-10FFFF';
+		return { unicodeRange: defaultRange, unicodeRangeArray: [defaultRange] };
 	}
 	characterSet.sort((a, b) => a - b);
 	const ranges: string[] = [];
@@ -70,7 +74,7 @@ function getUnicodeRange({ characterSet }: Font): string {
 		}
 	}
 	ranges.push(formatRange(start, end));
-	return ranges.join(', ');
+	return { unicodeRange: ranges.join(', '), unicodeRangeArray: ranges };
 }
 
 /**
