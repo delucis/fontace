@@ -1,5 +1,11 @@
 # fontace
 
+## 0.3.0
+
+### Minor Changes
+
+- [#8](https://github.com/delucis/fontace/pull/8) [`786d3f7`](https://github.com/delucis/fontace/commit/786d3f7e4e1e760a0f7fbaa66f24af5436e2d433) Thanks [@delucis](https://github.com/delucis)! - Adds a new `unicodeRangeArray` property for use cases where access to each range in `unicodeRange` is needed
+
 ## 0.2.2
 
 ### Patch Changes
