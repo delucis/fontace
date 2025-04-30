@@ -57,7 +57,6 @@ Fetch a font file over the network and then pass it to `fontace()`:
 
 ```js
 import { fontace } from 'fontace';
-import fs from 'node:fs';
 
 const response = await fetch('https://example.com/Inter-Variable.woff2');
 const fontBuffer = Buffer.from(await response.arrayBuffer());
