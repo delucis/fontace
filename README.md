@@ -32,6 +32,7 @@ In addition it returns:
 
 - `format`: The font file format for use in [`format()`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#format), e.g.`"woff2"` or `"truetype"`.
 - `isVariable`: `true` if the font file contains variable axes of some kind.
+- `unicodeRangeArray`: An array of the Unicode code point ranges this font file contains, e.g. `["U+0-10FFFF"]`, equivalent to `unicodeRange.split(', ')`. Useful if you need to iterate through the available ranges instead of inlining them directly in CSS.
 
 ## Usage
 
@@ -47,7 +48,7 @@ import fs from 'node:fs';
 
 const fontBuffer = fs.readFileSync('./Inter.woff2');
 const metadata = fontace(fontBuffer);
-// { family: "Inter", format: 'woff2', style: "normal", weight: "400", isVariable: false, unicodeRange: "U+0, U+20-7E..." }
+// { family: "Inter", format: 'woff2', style: "normal", weight: "400", isVariable: false, unicodeRange: "U+0, U+20-7E...", unicodeRangeArray: ["U+0", "U+20-7E", ...] }
 ```
 
 ### Example: remote font file
@@ -56,12 +57,11 @@ Fetch a font file over the network and then pass it to `fontace()`:
 
 ```js
 import { fontace } from 'fontace';
-import fs from 'node:fs';
 
 const response = await fetch('https://example.com/Inter-Variable.woff2');
 const fontBuffer = Buffer.from(await response.arrayBuffer());
 const metadata = fontace(fontBuffer);
-// { family: "Inter", format: 'woff2', style: "normal", weight: "100 900", isVariable: true, unicodeRange: "U+0, U+20-7E..." }
+// { family: "Inter", format: 'woff2', style: "normal", weight: "100 900", isVariable: true, unicodeRange: "U+0, U+20-7E...", unicodeRangeArray: ["U+0", "U+20-7E", ...] }
 ```
 
 ### Example: using `fontace` data to create CSS

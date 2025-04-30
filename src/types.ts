@@ -16,6 +16,11 @@ export interface FontMetadata {
 	family: string;
 	/** The range of Unicode code points this font file contains, e.g. `"U+0-10FFFF"`. */
 	unicodeRange: string;
+	/**
+	 * Array of Unicode code point ranges this font file contains, e.g. `["U+0-10FFFF"]`,
+	 * equivalent to `unicodeRange.split(', ')`.
+	 */
+	unicodeRangeArray: string[];
 	/** The style of this font file, e.g. `"normal"` or `"italic"`. */
 	style: FontStyle;
 	/** The font weight(s) this file supports, which can be a range for variable fonts, e.g. `"400"` or `"100 900"`. */
