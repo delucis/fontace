@@ -26,6 +26,8 @@ jobs:
           node-version: 22
           cache: 'pnpm'
       - run: pnpm install
+      - name: Upgrade npm for trusted publishing
+        run: npm i -g npm@^11.5.2 # TODO: remove when setup-node action comes with npm version that contains OIDC setup by default
       - name: Create Release Pull Request
         uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba
         with:
@@ -35,4 +37,4 @@ jobs:
           title: '[ci] release'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ''
+          NPM_TOKEN: "" # See https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
