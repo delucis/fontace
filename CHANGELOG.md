@@ -1,5 +1,11 @@
 # fontace
 
+## 0.3.1
+
+### Patch Changes
+
+- [#14](https://github.com/delucis/fontace/pull/14) [`7c0cf8b`](https://github.com/delucis/fontace/commit/7c0cf8b42706d65031642212dcb86b899e6c5745) Thanks [@delucis](https://github.com/delucis)! - No code changes. This release is the first published using OIDC trusted publisher configuration for improved security.
+
 ## 0.3.0
 
 ### Minor Changes
