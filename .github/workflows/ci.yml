@@ -1,4 +1,5 @@
 name: CI
+permissions: {}
 
 on:
   push:
@@ -12,10 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        with:
+          persist-credentials: false
       - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
         with:
           node-version: 24
-          cache: 'pnpm'
       - run: pnpm install
       - run: pnpm test
