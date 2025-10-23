@@ -34,7 +34,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       vite:
-        specifier: ^7.1.10
+        specifier: ^7.1.11
         version: 7.1.11(@types/node@22.13.14)
       vitest:
         specifier: ^3.2.4
