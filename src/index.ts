@@ -1,4 +1,6 @@
-import { create, type FontCollection, type Font } from 'fontkit';
+import type { FontCollection, Font } from 'fontkit';
+// @ts-expect-error fontkitten has no types yet
+import { create } from 'fontkitten';
 import type { FontStyle, FontWeight, FontMetadata } from './types';
 
 /** Get CSS weight for a font. */

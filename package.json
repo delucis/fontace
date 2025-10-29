@@ -37,7 +37,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"@types/fontkit": "^2.0.8",
-		"fontkit": "^2.0.4"
+		"fontkitten": "^0.0.2"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.5.1",
