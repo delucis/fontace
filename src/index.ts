@@ -1,8 +1,5 @@
-import { create } from 'fontkitten';
+import { create, type Font } from 'fontkitten';
 import type { FontStyle, FontWeight, FontMetadata } from './types';
-
-// TODO: import from fontkitten once available
-type Font = Extract<ReturnType<typeof create>, { type: 'TTF' | 'WOFF' | 'WOFF2' }>;
 
 /** Get CSS weight for a font. */
 function getWeight(font: Font): FontWeight {
