@@ -1,4 +1,4 @@
-import { create, type FontCollection, type Font } from 'fontkit';
+import { create, type Font } from 'fontkitten';
 import type { FontStyle, FontWeight, FontMetadata } from './types';
 
 /** Get CSS weight for a font. */
@@ -27,7 +27,7 @@ function getStyle(font: Font): FontStyle {
  * // { family: "Inter", style: "normal", weight: "400", unicodeRange: "U+0, U+20-7E...
  */
 export function fontace(fontBuffer: Buffer): FontMetadata {
-	const font = create(fontBuffer) as Font | FontCollection;
+	const font = create(fontBuffer);
 	if (font.type === 'TTC') {
 		throw new Error('TrueType Collection (TTC) files are not supported.');
 	} else if (font.type === 'DFont') {
