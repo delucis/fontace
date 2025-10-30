@@ -36,8 +36,7 @@
 	"homepage": "https://github.com/delucis/fontace#readme",
 	"license": "MIT",
 	"dependencies": {
-		"@types/fontkit": "^2.0.8",
-		"fontkitten": "^0.0.2"
+		"fontkitten": "^0.0.4"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.5.1",

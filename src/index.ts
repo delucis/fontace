@@ -1,7 +1,8 @@
-import type { FontCollection, Font } from 'fontkit';
-// @ts-expect-error fontkitten has no types yet
 import { create } from 'fontkitten';
 import type { FontStyle, FontWeight, FontMetadata } from './types';
+
+// TODO: import from fontkitten once available
+type Font = Extract<ReturnType<typeof create>, { type: 'TTF' | 'WOFF' | 'WOFF2' }>;
 
 /** Get CSS weight for a font. */
 function getWeight(font: Font): FontWeight {
@@ -29,7 +30,7 @@ function getStyle(font: Font): FontStyle {
  * // { family: "Inter", style: "normal", weight: "400", unicodeRange: "U+0, U+20-7E...
  */
 export function fontace(fontBuffer: Buffer): FontMetadata {
-	const font = create(fontBuffer) as Font | FontCollection;
+	const font = create(fontBuffer);
 	if (font.type === 'TTC') {
 		throw new Error('TrueType Collection (TTC) files are not supported.');
 	} else if (font.type === 'DFont') {
