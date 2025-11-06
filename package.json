@@ -11,7 +11,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup src/index.ts --format esm --dts --clean",
+		"build": "tsdown --dts --no-fixed-extension",
 		"prepublishOnly": "pnpm build",
 		"test": "vitest",
 		"ci-version": "changeset version && pnpm install --no-frozen-lockfile",
@@ -44,8 +44,7 @@
 		"@changesets/cli": "^2.29.7",
 		"@fontsource-variable/inter": "^5.2.5",
 		"@fontsource/roboto": "^5.2.5",
-		"tsup": "^8.5.0",
-		"typescript": "^5.9.3",
+		"tsdown": "^0.16.0",
 		"vite": "^7.1.12",
 		"vitest": "^4.0.6"
 	},
