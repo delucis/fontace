@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       fontkitten:
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.0.10
+        version: 0.0.10
     devDependencies:
       '@changesets/changelog-github':
         specifier: ^0.5.1
@@ -632,9 +632,6 @@ packages:
   extendable-error@0.1.7:
     resolution: {integrity: sha512-UOiS2in6/Q0FK0R0q6UY9vYpQ21mr/Qn1KOnte7vsACuNJf514WvCCUHSRCPcgjPT2bAhNIJdlE6bVap1GKmeg==}
 
-  fast-deep-equal@3.1.3:
-    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
-
   fast-glob@3.3.3:
     resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
@@ -662,8 +659,8 @@ packages:
   fix-dts-default-cjs-exports@1.0.1:
     resolution: {integrity: sha512-pVIECanWFC61Hzl2+oOCtoJ3F17kglZC/6N94eRWycFgBH35hHx0Li604ZIzhseh97mf2p0cv7vVrOZGoqhlEg==}
 
-  fontkitten@0.0.7:
-    resolution: {integrity: sha512-SZaRDLnCj0bSeT07Iub8ca5m3yzBCWQNL3g1An9pG+aWapvf/kq5WUGHC1wyFDoaTc+UNBg1rkGdjmsv5i1F3w==}
+  fontkitten@0.0.10:
+    resolution: {integrity: sha512-vRGMicvPSalc2KcNnxXm58jyp3AQNpMaW77GAW34JKm9WQ5Tixb15CvlOcorKMzvWMGYzwvoadgdqdzqepEKZA==}
     engines: {node: '>=20'}
 
   foreground-child@3.3.1:
@@ -946,9 +943,6 @@ packages:
   resolve-from@5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
-
-  restructure@3.0.2:
-    resolution: {integrity: sha512-gSfoiOEA0VPE6Tukkrr7I0RBdE0s7H1eFCDBk05l1KIQT1UIKNc5JZy6jdyW6eYH3aR3g5b3PuL77rq0hvwtAw==}
 
   reusify@1.1.0:
     resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==}
@@ -1788,8 +1782,6 @@ snapshots:
 
   extendable-error@0.1.7: {}
 
-  fast-deep-equal@3.1.3: {}
-
   fast-glob@3.3.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1821,10 +1813,8 @@ snapshots:
       mlly: 1.8.0
       rollup: 4.52.5
 
-  fontkitten@0.0.7:
+  fontkitten@0.0.10:
     dependencies:
-      fast-deep-equal: 3.1.3
-      restructure: 3.0.2
       tiny-inflate: 1.0.3
 
   foreground-child@3.3.1:
@@ -2057,8 +2047,6 @@ snapshots:
   regenerator-runtime@0.14.1: {}
 
   resolve-from@5.0.0: {}
-
-  restructure@3.0.2: {}
 
   reusify@1.1.0: {}
 
