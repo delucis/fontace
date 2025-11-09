@@ -31,7 +31,7 @@ importers:
         specifier: ^0.16.0
         version: 0.16.0(typescript@5.9.3)
       vite:
-        specifier: ^7.2.0
+        specifier: ^7.2.1
         version: 7.2.2(@types/node@22.13.14)(jiti@2.6.1)
       vitest:
         specifier: ^4.0.7
