@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       fontkitten:
-        specifier: ^0.0.12
-        version: 0.0.12
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@changesets/changelog-github':
         specifier: ^0.5.1
@@ -740,8 +740,8 @@ packages:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
 
-  fontkitten@0.0.12:
-    resolution: {integrity: sha512-fQjRDOk1mdXdpS926Qf/LjCp+Ky/+beUZNrv6NtrvdiVn1C3/gssDPvwngPdkxAZeV69rxkISZqNOKMKZ1xNNg==}
+  fontkitten@1.0.0:
+    resolution: {integrity: sha512-b0RdzQeztiiUFWEDzq6Ka26qkNVNLCehoRtifOIGNbQ4CfxyYRh73fyWaQX/JshPVcueITOEeoSWPy5XQv8FUg==}
     engines: {node: '>=20'}
 
   fs-extra@7.0.1:
@@ -1869,7 +1869,7 @@ snapshots:
       locate-path: 5.0.0
       path-exists: 4.0.0
 
-  fontkitten@0.0.12:
+  fontkitten@1.0.0:
     dependencies:
       tiny-inflate: 1.0.3
 
