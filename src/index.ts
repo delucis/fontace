@@ -28,12 +28,8 @@ function getStyle(font: Font): FontStyle {
  */
 export function fontace(fontBuffer: Buffer): FontMetadata {
 	const font = create(fontBuffer);
-	if (font.type === 'TTC') {
-		throw new Error('TrueType Collection (TTC) files are not supported.');
-	} else if (font.type === 'DFont') {
-		throw new Error('DFONT files are not supported.');
-	} else if (font.type !== 'TTF' && font.type !== 'WOFF' && font.type !== 'WOFF2') {
-		throw new Error(`Unknown font type: ${font.type}`);
+	if (font.isCollection) {
+		throw new Error(`${font.type} files are not supported.`);
 	}
 
 	return {
