@@ -44,7 +44,7 @@ export function fontace(fontBuffer: Buffer): FontMetadata {
 
 /**
  * Convert an array of unicode code points to a CSS unicode-range string.
- * @param font A fontkit font object.
+ * @param font A font object.
  * @returns A CSS unicode-range string, e.g. `"U+20-22, U+4E-50"`.
  */
 function getUnicodeRange({ characterSet }: Font): {
