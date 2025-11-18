@@ -43,9 +43,9 @@
 		"@changesets/cli": "^2.29.7",
 		"@fontsource-variable/inter": "^5.2.5",
 		"@fontsource/roboto": "^5.2.5",
-		"tsdown": "^0.16.0",
-		"vite": "^7.2.0",
-		"vitest": "^4.0.7"
+		"tsdown": "^0.16.4",
+		"vite": "^7.2.2",
+		"vitest": "^4.0.9"
 	},
-	"packageManager": "pnpm@10.20.0"
+	"packageManager": "pnpm@10.22.0"
 }
