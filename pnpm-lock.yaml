@@ -34,7 +34,7 @@ importers:
         specifier: ^7.2.2
         version: 7.2.2(@types/node@22.13.14)(jiti@2.6.1)
       vitest:
-        specifier: ^4.0.10
+        specifier: ^4.0.12
         version: 4.0.12(@types/node@22.13.14)(jiti@2.6.1)
 
 packages:
