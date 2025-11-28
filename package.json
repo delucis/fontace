@@ -44,7 +44,7 @@
 		"@changesets/cli": "^2.29.7",
 		"@fontsource-variable/inter": "^5.2.5",
 		"@fontsource/roboto": "^5.2.5",
-		"tsdown": "^0.16.6",
+		"tsdown": "^0.16.7",
 		"vite": "^7.2.4",
 		"vitest": "^4.0.13"
 	},
