@@ -46,7 +46,7 @@
 		"@fontsource/roboto": "^5.2.5",
 		"tsdown": "^0.16.7",
 		"vite": "^7.2.4",
-		"vitest": "^4.0.13"
+		"vitest": "^4.0.14"
 	},
 	"packageManager": "pnpm@10.23.0"
 }
