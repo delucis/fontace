@@ -1,4 +1,4 @@
-import { create, type FontCollection, type Font } from 'fontkit';
+import { create, type Font } from 'fontkitten';
 import type { FontStyle, FontWeight, FontMetadata } from './types';
 
 /** Get CSS weight for a font. */
@@ -27,13 +27,9 @@ function getStyle(font: Font): FontStyle {
  * // { family: "Inter", style: "normal", weight: "400", unicodeRange: "U+0, U+20-7E...
  */
 export function fontace(fontBuffer: Buffer): FontMetadata {
-	const font = create(fontBuffer) as Font | FontCollection;
-	if (font.type === 'TTC') {
-		throw new Error('TrueType Collection (TTC) files are not supported.');
-	} else if (font.type === 'DFont') {
-		throw new Error('DFONT files are not supported.');
-	} else if (font.type !== 'TTF' && font.type !== 'WOFF' && font.type !== 'WOFF2') {
-		throw new Error(`Unknown font type: ${font.type}`);
+	const font = create(fontBuffer);
+	if (font.isCollection) {
+		throw new Error(`${font.type} files are not supported.`);
 	}
 
 	return {
@@ -48,7 +44,7 @@ export function fontace(fontBuffer: Buffer): FontMetadata {
 
 /**
  * Convert an array of unicode code points to a CSS unicode-range string.
- * @param font A fontkit font object.
+ * @param font A font object.
  * @returns A CSS unicode-range string, e.g. `"U+20-22, U+4E-50"`.
  */
 function getUnicodeRange({ characterSet }: Font): {
