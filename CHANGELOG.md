@@ -1,5 +1,11 @@
 # fontace
 
+## 0.4.0
+
+### Minor Changes
+
+- [#45](https://github.com/delucis/fontace/pull/45) [`b4483f4`](https://github.com/delucis/fontace/commit/b4483f4f05ce81e464453d9a82fa8acf9c66ac6d) Thanks [@delucis](https://github.com/delucis)! - Makes `fontace` install size smaller by switching to a lighter weight font metadata extraction library
+
 ## 0.3.1
 
 ### Patch Changes
