@@ -1,5 +1,11 @@
 # fontace
 
+## 0.4.1
+
+### Patch Changes
+
+- [#113](https://github.com/delucis/fontace/pull/113) [`936c6f8`](https://github.com/delucis/fontace/commit/936c6f80db8b9682dbf1394d7c2595620f955b3d) Thanks [@renovate](https://github.com/apps/renovate)! - Updates dependency fontkitten to ^1.0.2
+
 ## 0.4.0
 
 ### Minor Changes
