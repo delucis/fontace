@@ -40,8 +40,8 @@
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.6.0",
 		"@changesets/cli": "^2.30.0",
-		"@fontsource-variable/inter": "^5.2.5",
-		"@fontsource/roboto": "^5.2.5",
+		"@fontsource-variable/inter": "^5.2.8",
+		"@fontsource/roboto": "^5.2.10",
 		"tsdown": "^0.21.2",
 		"vite": "^8.0.0",
 		"vitest": "^4.1.0"
