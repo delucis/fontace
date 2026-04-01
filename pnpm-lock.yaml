@@ -25,7 +25,7 @@ importers:
         specifier: ^5.2.5
         version: 5.2.5
       tsdown:
-        specifier: ^0.21.6
+        specifier: ^0.21.7
         version: 0.21.7(typescript@5.9.3)
       vite:
         specifier: ^8.0.3
