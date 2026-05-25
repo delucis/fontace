@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { fontace } from '../src';
+import { fontace } from '../dist';
 
 import interVariableWoff2String from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url&inline';
 import roboto400ItalicWoff2String from '@fontsource/roboto/files/roboto-latin-400-italic.woff2?url&inline';
