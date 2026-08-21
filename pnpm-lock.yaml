@@ -19,11 +19,11 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       '@fontsource-variable/inter':
-        specifier: ^5.2.5
-        version: 5.2.5
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource/roboto':
-        specifier: ^5.2.5
-        version: 5.2.5
+        specifier: ^5.3.0
+        version: 5.3.0
       tsdown:
         specifier: ^0.22.14
         version: 0.22.14
@@ -122,11 +122,11 @@ packages:
   '@emnapi/wasi-threads@2.0.1':
     resolution: {integrity: sha512-9DsSk+o5NBX0CCJT8s0EROGSGxjR/tKu6aBTaVyq+SjAEQH4XcdcRxPBRzsBLizTTJ49MJjF+jgu3qnO9GLQcQ==}
 
-  '@fontsource-variable/inter@5.2.5':
-    resolution: {integrity: sha512-TrWffUAFOnT8zroE9YmGybagoOgM/HjRqMQ8k9R0vVgXlnUh/vnpbGPAS/Caz1KIlOPnPGh6fvJbb7DHbFCncA==}
+  '@fontsource-variable/inter@5.3.0':
+    resolution: {integrity: sha512-OupL48va4JNofb97w6NYeF9S7W/kHNKM0Er8Dem5nqi4jeOLrVJDoE8tZEpnMJmtkvNbB1EIPPwHcdkF6b1oUA==}
 
-  '@fontsource/roboto@5.2.5':
-    resolution: {integrity: sha512-70r2UZ0raqLn5W+sPeKhqlf8wGvUXFWlofaDlcbt/S3d06+17gXKr3VNqDODB0I1ASme3dGT5OJj9NABt7OTZQ==}
+  '@fontsource/roboto@5.3.0':
+    resolution: {integrity: sha512-BapRJOWYP+LZ21zp+wBQjfpPYKRoxc4LspJ/RLuI+HSMBD5u/X4O+ESDrSvEqDSy0rAl7GwBJ+09mdc16cVQ1Q==}
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -998,9 +998,9 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@fontsource-variable/inter@5.2.5': {}
+  '@fontsource-variable/inter@5.3.0': {}
 
-  '@fontsource/roboto@5.2.5': {}
+  '@fontsource/roboto@5.3.0': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
